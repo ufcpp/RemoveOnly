@@ -39,6 +39,7 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
+        include-prerelease: true
     - name: Pack
       run: |
         arrTag=(${GITHUB_REF//\// })
@@ -61,6 +62,7 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
+        include-prerelease: true
     - name: Download Artifact
       uses: actions/download-artifact@v1
       with:
